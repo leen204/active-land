@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+	<script src="theme-toggle.js"></script>
+	
+
+    <title>coaches Page</title>
+    <style>
+        body {
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+			
+        }
+        
+
+        .tabs {
+            display: flex;
+            gap: 10px;
+            margin: 20px;
+        }
+        .tabs button {
+            padding: 10px 15px;
+            border: 1px solid #aaa;
+            border-radius: 20px;
+            background:#AEB5AF;
+            cursor: pointer;
+			color: white;
+        }
+        .tabs button.active {
+            background: #555;
+            color: white;
+        }
+
+        .coach-container {
+            width: 80%;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .coach-card {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            background: white;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+			
+        }
+        .coach-card input {
+            padding: 5px;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+        }
+        .schedule-btn {
+            background: #ddd;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .schedule-btn i {
+            font-size: 14px;
+        }
+	
+
+
+.schedule-btn {
+    text-decoration: none; 
+    background: #ddd; 
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+	color:black;
+    transition: background 0.3s ease, transform 0.2s ease; 
+}
+
+.schedule-btn:hover {
+    background: #bbb; 
+}
+/* الخلفية الأساسية */
+body.dark-theme {
+    background-color: #0b0c1a;
+    color: #f5f5f5;
+}
+
+/* ترويسة الموقع والتنقل */
+.dark-theme header,
+.dark-theme .header-container,
+.dark-theme nav,
+.dark-theme .nav-menu {
+    color: #f5f5f5;
+}
+
+/* الأزرار */
+.dark-theme button,
+.dark-theme .btn {
+    background-color: #5D2048;
+    color: #f5f5f5;
+    border: #5D2048;
+}
+
+.dark-theme button:hover,
+.dark-theme .btn:hover {
+border: #7A3664;
+    background-color: #7A3664;
+	
+}
+
+/* وضع الدارك مود للصفحة الخاصة بالمدربين */
+
+
+
+
+/* الكروت */
+.dark-theme .coach-card {
+    background-color: #420D32;
+    color: #f5f5f5;
+    border: 1px solid #420D32;
+}
+
+
+
+
+
+.dark-theme .tabs button.active {
+    background-color: #5D2048;
+    color: #ffffff;
+}
+
+
+
+/* الروابط */
+.dark-theme a {
+background-color: #5D2048;
+    color: #cfcfcf;
+}
+
+.dark-theme a:hover {
+    color: #7A3664;
+    text-decoration: underline;
+}
+
+
+
+    </style>
+	<script>
+  function toggleList(element) {
+    const innerList = element.closest('.coach-card').querySelector('.inner-list');
+    innerList.style.display = innerList.style.display === 'block' ? 'none' : 'block';
+  }
+</script>
+
+</head>
+<body>
+
+<header class="main-header">
+    <div class="header-container">
+        <a href="homepage.html" class="logo"><img src="images/active-land-logo.png" alt="Active Land Logo"></a>
+        <input type="checkbox" id="menu-toggle" style="display: none;">
+        <label for="menu-toggle" class="menu-toggle"><i class="fa fa-bars"></i></label>
+
+       <nav class="nav-menu">
+           
+  <a href="activities.html" accesskey="a" title="Alt + A">Activities</a>
+  <a href="coaches.html" accesskey="c" title="Alt + C">Coaches</a>
+  <a href="admindashboard.html" accesskey="d" title="Alt + D">Administrator</a>
+  <a href="parent-dashboard.html" accesskey="p" title="Alt + P">Parent</a>
+</nav>
+
+       <div class="auth-container">
+    <div class="user-profile" tabindex="0">
+        <button class="profile-btn">
+            <i class="fa-solid fa-user"></i> 
+        </button>
+        <div class="dropdown-menu">
+            <a href="profile.html">View Profile</a>
+        </div>
+    </div>
+</div>   
+    </div>
+</header>
+
+<nav class="breadcrumb">
+    <a href="homepage.html">Home</a> →  <a href="coachs.html">Coaches</a>
+	<hr>
+</nav>
+
+<div class="tabs">
+    <button onclick="location.href='admindashboard.html'">Kids Manage</button>
+    <button onclick="location.href='admin-activitys.html'">Activities</button>
+    <button onclick="location.href='admin-coachs.html'">Coaches</button>
+</div>
+<div class="coach-container">
+
+<div class="coach-card" onclick="toggleList(this)">
+  <div style="width: 100%;">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+      <span style="font-weight: bold;">Khalid</span>
+
+<a href="schedule.html#Khalid" class="schedule-btn" onclick="event.stopPropagation()">
+  Schedule <i class="fa fa-arrow-right"></i>
+</a>
+      </div>
+      <div class="inner-list" style="display: none;">
+        <strong>Activities:</strong>
+        <ul>
+          <li>Football</li>
+          <li>Karate</li>
+          <li>Basketball</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+ <div class="coach-card" onclick="toggleList(this)">
+  <div style="width: 100%;">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+      <span style="font-weight: bold;"> Maha</span>
+
+		<a href="schedule.html#Maha" class="schedule-btn" onclick="event.stopPropagation()">
+  Schedule <i class="fa fa-arrow-right"></i>
+</a>
+
+      </div>
+      <div class="inner-list" style="display: none;">
+        <strong>Activities:</strong>
+        <ul>
+          <li>Yoga</li>
+          <li>Art Class</li>
+          <li>Dance Class</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+ <div class="coach-card" onclick="toggleList(this)">
+  <div style="width: 100%;">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+      <span style="font-weight: bold;">Mike Johnson</span>
+		<a href="schedule.html#Mike" class="schedule-btn" onclick="event.stopPropagation()">
+  Schedule <i class="fa fa-arrow-right"></i>
+</a>
+
+      </div>
+
+      <div class="inner-list" style="display: none;">
+        <strong>Activities:</strong>
+        <ul>
+          <li>Swimming</li>
+          <li>Tennis</li>
+          <li>Handball</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+<div class="coach-card" onclick="toggleList(this)">
+  <div style="width: 100%;">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+      <span style="font-weight: bold;">Emily Brown</span>
+      <a href="schedule.html#Emily" class="schedule-btn" onclick="event.stopPropagation()">
+        Schedule <i class="fa fa-arrow-right"></i>
+      </a>
+    </div>
+
+    <div class="inner-list activity-box" style="display: none;">
+      <strong>Activities:</strong>
+      <ul>
+        <li>Ballet</li>
+        <li>Gymnastics</li>
+        <li>Cycling</li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+
+</div>
+
+
+<footer class="main-footer">
+    <div class="footer-container">
+        <a href="mailto:activeland@gmail.com"><i class="fa-solid fa-envelope"></i> activeland@gmail.com</a>
+        <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i> activeland@</a>
+        <a href="tel:+996555555"><i class="fa-solid fa-phone"></i> +996555555</a>
+    </div>
+</footer>
+<script>
+  function toggleList(card) {
+    const innerList = card.querySelector('.inner-list');
+    if (innerList) {
+      innerList.style.display = innerList.style.display === 'block' ? 'none' : 'block';
+    }
+  }
+</script>
+
+</body>
+
+</html>

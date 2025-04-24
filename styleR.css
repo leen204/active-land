@@ -1,0 +1,235 @@
+
+h1 {
+  
+   
+    border-bottom: 5px solid #AEB5AF;
+    margin: 40px auto;
+}
+
+.kids-list {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 30px 20px;
+}
+
+.kid-card {
+    background: #f7f6f6;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    width: 300px;
+    height: 500px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    border:solid #f5dada;
+}
+
+.kid-card img {
+    width: 100%;
+    height: 160px;
+    border-radius: 30px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.kid-card ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    margin-top: auto;
+}
+
+.kid-card ul li {
+    background: #FFFFFF;
+    padding: 10px;
+    border-radius: 40px;
+    margin: 8px 0;
+    font-size: 16px;
+    font-weight: 600;
+    width: 90%;
+    text-align: center;
+    color: #2D2D2D;
+    border: 1px solid #898d89;
+}
+
+.sub-nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+}
+
+.sub-nav button {
+    background: #AEB5AF;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+    font-weight: 600;
+}
+
+.sub-nav button:hover {
+    background: #8E9A94;
+}
+
+h2 {
+    text-align: center;
+    font-weight: 900;
+    font-size: 32px;
+    margin-bottom: 20px;
+  
+    
+}
+
+.form-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #E6D3CD;
+
+    overflow-y: visible;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    font-weight: 600;
+    font-size: 16px;
+    color: #2D2D2D;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 20px;
+    border: 1px solid #AEB5AF;
+    font-size: 16px;
+    margin-top: 8px;
+    box-sizing: border-box;
+}
+
+input[type="file"] {
+    background: #fff;
+    color: #2D2D2D;
+    border: 1px solid #AEB5AF;
+    border-radius: 20px;
+}
+
+input[type="file"]:focus {
+    background: #E6D3CD;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.submit-btn,
+.cancel-btn {
+    background: #AEB5AF;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.submit-btn:hover,
+.cancel-btn:hover {
+    background: #8E9A94;
+}
+
+h2 {
+    text-align: left;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #2D2D2D;
+}
+
+#register-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 30px;
+    width: 100%;
+    margin-bottom: 80px;
+}
+
+#register-form h2 {
+    text-align: center;
+    font-weight: 900;
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #2D2D2D;
+    width: 100%;
+}
+
+
+.kid-card:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+ caption{
+	 caption-side: left; 
+    text-align: left; 
+    font-weight: bold; 
+    font-size: 18px; 
+    padding: 10px; 
+
+ }
+ .filter-container {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.filter-container label {
+    font-size: 18px;
+    font-weight: bold;
+    color: #2D2D2D;
+}
+
+.filter-container select {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 15px;
+    border: 1px solid #AEB5AF;
+    background-color: #f2e7e5;
+    color: #2D2D2D;
+    width: 250px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.filter-container select:hover {
+    background-color: #BCC1BD;
+    border-color: #fae3e8;
+}
+
+.filter-container select:focus {
+    outline: none;
+    border-color: #E6D3CD;
+}
+

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register a New Kid</title>
+    <link rel="stylesheet" href="styleR.css">
+	    <link rel="stylesheet" href="style.css">
+		 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<script src="theme-toggle.js"></script>
+</head>
+
+<body>
+
+   <header class="main-header">
+    <div class="header-container">
+        <a href="homepage.html" class="logo"><img src="images/active-land-logo.png" alt="Active Land Logo"></a>
+        
+        <input type="checkbox" id="menu-toggle" style="display: none;">
+        <label for="menu-toggle" class="menu-toggle"><i class="fa fa-bars"></i></label>
+
+         <nav class="nav-menu">
+           
+  <a href="activities.html" accesskey="a" title="Alt + A">Activities</a>
+  <a href="coaches.html" accesskey="c" title="Alt + C">Coaches</a>
+  <a href="admindashboard.html" accesskey="d" title="Alt + D">Administrator</a>
+  <a href="parent-dashboard.html" accesskey="p" title="Alt + P">Parent</a>
+</nav>
+		
+		
+<div class="auth-container">
+    <div class="user-profile" tabindex="0">
+        <button class="profile-btn">
+            <i class="fa-solid fa-user"></i> 
+        </button>
+        <div class="dropdown-menu">
+            <a href="profile.html">View Profile</a>
+        </div>
+    </div>
+</div>
+
+    </div>
+</header>
+
+  <nav class="breadcrumb">
+            <a href="homepage.html">Home</a> → <a href="parent-dashboard.html">Parent Dashboard</a> → <a href="Register-a-New-kid.html">PRegister New Kid</a>
+			<hr>
+        </nav>
+
+
+    <main id="register-form">
+      
+        <h1>Register a New Kid</h1>
+
+        <section class="form-container">
+            <form action="#" method="POST" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="kidName">Kid Name</label>
+                    <input type="text" id="kidName" name="kidName" placeholder="Enter kid's name" required>
+                    <div id="kidNameErorr" class="error-message"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="photo">Upload Photo</label>
+                    <input type="file" id="photo" name="photo" accept="image/*">
+                </div>
+
+                <div class="form-group">
+                    <label for="dob">Date of Birth</label>
+                    <input type="date" id="dob" name="dob" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="age">Age</label>
+                    <input type="number" id="age" name="age" min="1" max="100" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="gender">Gender</label>
+                    <select id="gender" name="gender" required>
+                        <option value="M">Male</option>
+                        <option value="F">Female</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="weight">Weight (kg)</label>
+                    <input type="number" id="weight" name="weight" min="1" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="height">Height (cm)</label>
+                    <input type="number" id="height" name="height" min="1" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="contactPhone">Phone</label>
+                    <input type="tel" id="contactPhone" name="contactPhone" placeholder="Enter phone number" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="contactEmail">Email</label>
+<input type="text" id="contactEmail" name="contactEmail" placeholder="Enter email address">
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="submit-btn">Submit</button>
+                    <button type="reset" class="cancel-btn">Cancel</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+  <footer class="main-footer">
+    <div class="footer-container">
+        <div class="contact-icons">
+            <a href="mailto:activeland@gmail.com" class="contact-item">
+                <i class="fa-solid fa-envelope"></i> activeland@gmail.com
+            </a>
+            <br>
+            <a href="https://www.instagram.com/" target="_blank" class="contact-item">
+                <i class="fa-brands fa-instagram"></i> activeland@
+            </a>
+            <br>
+            <a href="tel:+996555555" class="contact-item">
+                <i class="fa-solid fa-phone"></i> +996555555
+            </a>
+        </div>
+    </div>
+</footer>
+<script src="register-kid.js"></script>
+</body>
+</html>

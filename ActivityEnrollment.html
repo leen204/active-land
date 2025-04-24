@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity Enrollment</title>
+    <link rel="stylesheet" href="styleR.css">
+		    <link rel="stylesheet" href="style.css">
+	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+	 <script src="theme-toggle.js"></script>
+
+
+    <style>
+
+        h2 {
+            font-weight: 900;
+            font-size: 36px;
+            color: #2D2D2D;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-align: center;
+            padding-bottom: 10px;
+            border-bottom: 5px solid #AEB5AF;
+            margin: 40px auto;
+            width: fit-content;
+        }
+
+        .filter-container {
+            display: flex;
+            justify-content: flex-start;
+            gap: 20px;
+            padding: 20px;
+            align-items: center;
+        }
+
+        .filter-container select {
+            padding: 8px;
+            border-radius: 10px;
+            border: 1px solid #AEB5AF;
+            font-size: 16px;
+            width: 200px;
+            font-family: 'Nunito', sans-serif;
+            background-color: #f2e7e5;
+            margin-right: 20px;
+        }
+
+        .filter-container label {
+            font-size: 18px;
+            font-family: 'Nunito', sans-serif;
+            color: #2D2D2D;
+            margin-left: 20px;
+        }
+
+        .activities-container {
+            padding: 20px;
+        }
+
+        /* Flexbox for Activity Box */
+        .activity-box {
+            display: flex;
+            gap: 20px;
+            overflow-x: auto;
+            padding: 20px;
+            border: 2px solid #fae3e8;
+            border-radius: 10px;
+            max-width: 100%;
+        }
+
+        .activity-card {
+            background-color: #f1f1f1;
+            width: 250px;
+            border-radius: 8px;
+            padding: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .activity-card img {
+            width: 100%;
+            max-width: 200px;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 20px;
+            margin-bottom: 10px; /* Added margin to give space between image and text */
+        }
+
+        /* Titles and Descriptions positioning */
+        .activity-info {
+            margin-top: 10px;
+        }
+
+        .activity-info p {
+            margin: 5px 0;
+            font-size: 14px;
+            color: #2D2D2D;
+        }
+
+        .activity-info input {
+            margin-top: 10px;
+        }
+
+        .activity-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Hover effect for select boxes */
+        select {
+            font-family: 'Nunito', sans-serif;
+            font-weight: 600;
+            padding: 10px;
+            border-radius: 15px;
+            border: 1px solid #9ca29d;
+            background-color: #f8f7fa;
+            color: #2D2D2D;
+            width: 220px;
+            transition: border-color 0.3s ease;
+        }
+
+        select:hover {
+            background-color: #bcc1bd;
+            border-color: #f3bac6;
+        }
+
+        .select-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            gap: 20px;
+            width: 100%;}
+            .subm{
+            background-color: #AEB5AF;    
+        color: white;
+        font-size: 18px;
+        padding: 12px 24px;
+        border-radius: 25px;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        width: 100%; 
+        max-width: 200px; 
+        margin: 30px auto; 
+        display: block;
+           }
+
+ 
+
+
+    </style>
+</head>
+<body>
+
+   
+<header class="main-header">
+    <div class="header-container">
+        <a href="homepage.html" class="logo"><img src="images/active-land-logo.png" alt="Active Land Logo"></a>
+        
+        
+        <input type="checkbox" id="menu-toggle" style="display: none;">
+        <label for="menu-toggle" class="menu-toggle"><i class="fa fa-bars"></i></label>
+
+          <nav class="nav-menu">
+           
+  <a href="activities.html" accesskey="a" title="Alt + A">Activities</a>
+  <a href="coaches.html" accesskey="c" title="Alt + C">Coaches</a>
+  <a href="admindashboard.html" accesskey="d" title="Alt + D">Administrator</a>
+  <a href="parent-dashboard.html" accesskey="p" title="Alt + P">Parent</a>
+</nav>
+       <div class="auth-container">
+    <div class="user-profile" tabindex="0">
+        <button class="profile-btn">
+            <i class="fa-solid fa-user"></i> 
+        </button>
+        <div class="dropdown-menu">
+            <a href="profile.html">View Profile</a>
+        </div>
+    </div>
+</div>   
+    </div>
+</header>
+ 
+ <nav class="breadcrumb">
+            <a href="homepage.html">Home</a> → <a href="parent-dashboard.html">Parent Dashboard</a> →<a href="ActivityEnrollment.html">Activity Enrollment</a> 
+			<hr>
+        </nav>
+    <main>
+       
+
+        <h2>Activity Enrollment</h2>
+        
+       <form  id="activity-form" action="#" method="post">
+            <section class="filter-container">
+                <label for="kid-select">Name of kid</label>
+                <select id="kid-select">
+                    <option value="Omar">Omar</option>
+                    <option value="Lana">Lana</option>
+                </select>
+    
+                <label for="coach-select">Filter by Coach</label>
+                <select id="coach-select" name="Coach">
+                    <optgroup label="Intermediate coaches">
+                        <option value="Coach 1">Maha</option>
+                        <option value="Coach 2">Khalid</option>
+                    </optgroup>
+                    <optgroup label="Expert coaches">
+                    <option value="Coach 1">Emily Brown</option>
+                    <option value="Coach 2">Mike Johson</option>
+                    </optgroup>
+                </select>
+                <label for="prerequisite-select">Filter by Prerequisite</label>
+<select id="prerequisite-select">
+    
+</select>
+            </section>
+
+        <section class="activities-container">
+            <div class="activity-box">
+                <div class="activity-card">
+                    <img src="images/Art.jpg" alt="Activity 1">
+                    <div class="activity-info">
+                        <p>Art</p>
+                        <p>Creative art activity to inspire imagination</p>
+                        <input type="checkbox" id="activity1">
+                    </div>
+                </div>
+
+                <div class="activity-card">
+                    <img src="images/Basketball.jpeg" alt="Activity 2">
+                    <div class="activity-info">
+                        <p>Basket Ball</p>
+                        <p>Basket Ball drills to improve motor skills and coordination</p>
+                        <input type="checkbox" id="activity2">
+                    </div>
+                </div>
+
+                <div class="activity-card">
+                    <img src="images/Cycling.jpeg" alt="Activity 3">
+                    <div class="activity-info">
+                        <p>Cycling</p>
+                        <p>Outdoor Cycling to explore the environment and build endurance</p>
+                        <input type="checkbox" id="activity3">
+                    </div>
+                </div>
+
+                <div class="activity-card">
+                    <img src="images/Dancing.jpg" alt="Activity 4">
+                    <div class="activity-info">
+                        <p>Dancing</p>
+                        <p>Group dancing to enhance coordination and physical finess</p>
+                        <input type="checkbox" id="activity4">
+                    </div>
+                </div>
+
+                <div class="activity-card">
+                    <img src="images/Football.jpeg" alt="Activity 5">
+                    <div class="activity-info">
+                        <p>Football</p>
+                        <p>Outdoor team games teamework and collaboration</p>
+                        <input type="checkbox" id="activity5">
+                    </div>
+                </div>
+
+                <div class="activity-card">
+                    <img src="images/Gymnastics.jpg" alt="Activity 6">
+                    <div class="activity-info">
+                        <p>Gymnastics</p>
+                        <p>Gymnastics exercises to devlop strength and flexibility</p>
+                        <input type="checkbox" id="activity6">
+                    </div>
+                </div>
+
+                <div class="activity-card">
+                    <img src="images/Handball.jpeg" alt="Activity 7">
+                    <div class="activity-info">
+                        <p>Handball</p>
+                        <p>Handball to improve sports skills and teamworks</p>
+                        <input type="checkbox" id="activity7">
+                    </div>
+                </div>
+
+                <div class="activity-card">
+                    <img src="images/Karate.jpg" alt="Activity 8">
+                    <div class="activity-info">
+                        <p>Karate</p>
+                        <p>Martial arts to build confidence , discipline </p>
+                        <input type="checkbox" id="activity8">
+                    </div>
+                </div>
+
+                <div class="activity-card">
+                    <img src="images/Swimming.jpg" alt="Activity 9">
+                    <div class="activity-info">
+                        <p>Swimming</p>
+                        <p>Swimming to devlop physical strength and flexibility</p>
+                        <input type="checkbox" id="activity9">
+                    </div>
+                </div>
+
+                <div class="activity-card">
+                    <img src="images/Tennis.jpeg" alt="Activity 10">
+                    <div class="activity-info">
+                        <p>Tennis</p>
+                        <p>Tennis to improve reaction time and hand eye coordination</p>
+                        <input type="checkbox" id="activity10">
+                    </div>
+                </div>
+
+                <div class="activity-card">
+                    <img src="images/Yoga.jpg" alt="Activity 11">
+                    <div class="activity-info">
+                        <p>Yoga</p>
+                        <p>Yoga to strengthen the mind and body and increasing fouc</p>
+                        <input type="checkbox" id="activity11">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="submit-section">
+            <button type="submit" class="subm">Submit</button>
+        </section>
+        </form>
+    </main>
+
+   <footer class="main-footer">
+    <div class="footer-container">
+        
+        <div class="contact-icons">
+            <a href="mailto:activeland@gmail.com" class="contact-item">
+                <i class="fa-solid fa-envelope"></i> activeland@gmail.com
+            </a>
+            <br>
+            <a href="https://www.instagram.com/" target="_blank" class="contact-item">
+                <i class="fa-brands fa-instagram"></i> activeland@
+            </a>
+            <br>
+            <a href="tel:+996555555" class="contact-item">
+                <i class="fa-solid fa-phone"></i> +996555555
+            </a>
+        </div>
+    </div>
+</footer>
+<script src="activity-enrollment.js"></script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+
+
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+
+.coaches-container {
+    display: flex;
+    overflow-x: auto; 
+    gap: 15px;
+    padding-bottom: 10px;
+    padding: 10px;
+	overflow: auto;
+}
+
+
+.coach-card {
+    display: flex;
+    align-items: center;
+    background-color: #EAE3D8;
+    border-radius: 15px;
+    padding: 15px;
+    width: 350px;
+    min-width: 350px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+	    margin: 40px 15px;
+
+}
+
+
+.coach-card:hover {
+    transform: scale(1.05);
+}
+
+
+.coach-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+
+.coach-info {
+    text-align: left;
+    flex: 1;
+}
+
+
+.rating {
+    color: #FFD700;
+    margin: 5px 0;
+}
+
+.rating i {
+    font-size: 18px;
+}
+
+
+.schedule-btn {
+    background-color: #DAC9BA;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s ease-in-out;
+	  text-decoration: none;
+
+}
+
+.schedule-btn:hover {
+    background-color: #C2CBC6;
+}
+
+
+/* ===== دارك مود لصفحة Coaches ===== */
+body.dark-theme .title {
+    color: #ffffff;
+}
+
+body.dark-theme .coach-card {
+    background-color: #420D32;
+    color: #ffffff;
+}
+
+body.dark-theme .coach-info,
+body.dark-theme .coach-info * {
+    color: #ffffff;
+}
+
+body.dark-theme .schedule-btn {
+    background-color: #5D2048;
+    color: #fff;
+}
+
+body.dark-theme .schedule-btn:hover {
+    background-color: #7A3664;
+}
+.coaches-container {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;         /* Scroll أفقي */
+    overflow-y: hidden;       /* منع التمدد العمودي */
+    white-space: nowrap;      /* كل الكروت بنفس السطر */
+    gap: 15px;
+    padding: 10px;
+    scroll-behavior: smooth;
+}
+
+.coach-card {
+    flex-shrink: 0;           /* منع تصغير الكروت */
+    width: 300px;
+    min-width: 300px;
+    background-color: #EAE3D8;
+    border-radius: 15px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.coach-card:hover {
+    transform: scale(1.05);
+}
+.coach-info {
+  text-align: left;
+  flex: 1;
+  overflow: hidden;        /* يخفي أي شيء خارج حدود العنصر */
+  word-wrap: break-word;   /* يكسر الكلمات الطويلة تلقائيًا */
+  word-break: break-word;  /* يكسر الكلمة إذا كانت طويلة */
+  white-space: normal;     /* يسمح للأسطر إنها تنزل */
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+   <meta charset="UTF-8">
+   <title>Evaluation</title>
+   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="evaluation.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+   <script src="evaluation.js"></script>
+<script src="theme-toggle.js"></script>
+
+</head>
+
+
+<body>
+
+<header class="main-header">
+    <div class="header-container">
+        <a href="homepage.html" class="logo"><img src="images/active-land-logo.png" alt="Active Land Logo"></a>
+        
+        <input type="checkbox" id="menu-toggle" style="display: none;">
+        <label for="menu-toggle" class="menu-toggle"><i class="fa fa-bars"></i></label>
+
+       <nav class="nav-menu">
+           
+  <a href="activities.html" accesskey="a" title="Alt + A">Activities</a>
+  <a href="coaches.html" accesskey="c" title="Alt + C">Coaches</a>
+  <a href="admindashboard.html" accesskey="d" title="Alt + D">Administrator</a>
+  <a href="parent-dashboard.html" accesskey="p" title="Alt + P">Parent</a>
+</nav>
+        <div class="auth-container">
+            <div class="user-profile" tabindex="0">
+                <button class="profile-btn">
+                    <i class="fa-solid fa-user"></i> 
+                </button>
+                <div class="dropdown-menu">
+                    <a href="profile.html">View Profile</a>
+                </div>
+            </div>
+        </div>   
+    </div>
+</header>
+
+<nav class="breadcrumb">
+    <a href="homepage.html">Home</a> → 
+    <a href="parent-dashboard.html">Parent Dashboard</a> → 
+    <a href="evaluation.html">Evaluation</a>
+    <hr>
+</nav>
+
+<h1>Activity Evaluation</h1>
+
+<div class="container">
+    <div class="activity-selection">
+        <label for="activity" class="label">Select Activity:</label>
+        <select id="activity" name="activity">
+            <option value="Activity">Activity</option>
+            <option value="Football">Football</option>
+            <option value="Basketball">Basketball</option>
+            <option value="Karate">Karate</option>
+            <option value="Yoga">Yoga</option>
+            <option value="Art Class">Art Class</option>
+            <option value="Dance Class">Dance Class</option>
+        </select>
+    </div>
+
+    <div class="container">
+        <form action="#" method="POST">
+		
+            <fieldset>
+                <div class="evaluation-container">
+
+                    <label class="rating-label">Evaluation:</label>
+                    <div class="rating">
+                        <input type="radio" id="star5" name="rating" value="5">
+                        <label for="star5" class="star">★</label>
+                        <input type="radio" id="star4" name="rating" value="4">
+                        <label for="star4" class="star">★</label>
+                        <input type="radio" id="star3" name="rating" value="3">
+                        <label for="star3" class="star">★</label>
+                        <input type="radio" id="star2" name="rating" value="2">
+                        <label for="star2" class="star">★</label>
+                        <input type="radio" id="star1" name="rating" value="1">
+                        <label for="star1" class="star">★</label>
+                    </div>
+				
+                    <div class="feedback-container">
+                        <label for="comments">Feedback:</label>
+                        <textarea id="comments" name="comments" rows="4" ></textarea> 
+                    </div>
+
+                    <div class="form-buttons">
+                        <button type="submit" class="submit">Submit</button>
+
+                    </div>
+
+
+                </div> 
+            </fieldset> 
+        </form> 
+    </div>
+</div>
+
+<footer class="main-footer">
+    <div class="footer-container">
+        <div class="contact-icons">
+            <a href="mailto:activeland@gmail.com" class="contact-item">
+                <i class="fa-solid fa-envelope"></i> activeland@gmail.com
+            </a>
+            <br>
+            <a href="https://www.instagram.com/" target="_blank" class="contact-item">
+                <i class="fa-brands fa-instagram"></i> activeland@
+            </a>
+            <br>
+            <a href="tel:+996555555" class="contact-item">
+                <i class="fa-solid fa-phone"></i> +996555555
+            </a>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

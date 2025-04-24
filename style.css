@@ -1,0 +1,372 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap');
+@media (max-width: 768px) {
+  .activities-container,
+  .coaches-container,
+  .comments-container {
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .activities-wrapper,
+  .coaches-container,
+  .comments-container {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+  }
+
+  .activity-card,
+  .coach-card,
+  .comment-card {
+    flex-shrink: 0;
+    width: 260px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="theme-toggle.js"></script>
+
+
+h1,h2 {
+    font-weight: 900;
+    font-size: 36px;
+    color: #2D2D2D;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+	
+}
+
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: #F9F9F9; 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    color: #2D2D2D; 
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+}
+
+
+main {
+    flex: 1; 
+}
+
+.main-header {
+    background:  #AEB5AF;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1100px;
+    background: #C2CBC6;
+    padding: 10px 20px;
+    border-radius: 25px;
+    box-shadow: 3px 3px 10px rgba(13, 71, 161, 0.3);
+}
+
+
+.logo {
+    width: 120px;  
+    height: 50px;  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; 
+}
+
+.logo img {
+    width: 100px;
+    height: auto; 
+    object-fit: contain; 
+}
+
+
+
+.nav-menu {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 18px;
+    border-radius: 15px;
+    background: #E6D3CD ;
+    transition: 0.3s ease-in-out;
+}
+
+.nav-menu a:hover {
+    background: #D38B8B ; 
+}
+
+.profile-btn {
+    background: #E6D3CD; 
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 18px;
+    border-radius: 15px;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.profile-btn:hover {
+    background: #D38B8B;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background: #E6D3CD;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    width: 140px;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s, transform 0.3s, visibility 0.3s;
+    text-align: center;
+    padding: 10px;
+    z-index: 1000;
+}
+
+.dropdown-menu a {
+    display: block;
+    background: #DAC9BA;
+    color: #2D2D2D;
+    padding: 10px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.dropdown-menu a:hover {
+    background: #C2CBC6;
+}
+
+.user-profile:focus-within .dropdown-menu,
+.user-profile:hover .dropdown-menu {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #2D2D2D;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background: #C2CBC6; 
+        padding: 10px 0;
+        border-radius: 0 0 15px 15px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-menu a {
+        display: block;
+        padding: 12px 20px;
+        text-align: left;
+        width: 100%;
+    }
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+    }
+
+    #menu-toggle:checked ~ .nav-menu {
+        display: flex;
+    }
+}
+
+.main-footer {
+    background: #BBB7E5; 
+    text-align: center;
+    margin-top: auto; 
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px; 
+}
+
+.footer-container hr {
+    width: 30px; 
+    height: 1px;
+    background-color: #2D2D2D; 
+    border: none;
+}
+
+
+.main-footer {
+    background: #C2CBC6;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: auto;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    padding-left: 20px;
+}
+
+.footer-container a,
+.footer-container p {
+    display: flex; 
+    align-items: center; 
+    gap: 8px; 
+    text-decoration: none;
+    color: #2D2D2D; 
+    font-size: 16px; 
+}
+
+
+breadcrumb {
+    text-align: left;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.breadcrumb a {
+    text-decoration: none;
+    color: #666;
+}
+
+
+
+
+
+/* ================= DARK THEME ================= */
+
+body.dark-theme {
+  background-color: #0B0E20;
+  color: #F1F1F1;
+}
+
+body.dark-theme h1,
+body.dark-theme h2,
+body.dark-theme .section-title,
+body.dark-theme .title {
+  color: #ffffff !important;
+}
+
+body.dark-theme .main-header {
+    background: #5D2048;
+}
+
+body.dark-theme .header-container {
+    background: #420D32;
+}
+
+body.dark-theme .nav-menu a,
+body.dark-theme .profile-btn {
+    background: #5D2048;
+    color: white;
+}
+
+body.dark-theme .nav-menu a:hover,
+body.dark-theme .profile-btn:hover {
+    background: #7A3664;
+}
+
+body.dark-theme .dropdown-menu {
+    background: #420D32;
+}
+
+body.dark-theme .dropdown-menu a {
+    background: #5D2048;
+    color: white;
+}
+
+body.dark-theme .dropdown-menu a:hover {
+    background: #7A3664;
+}
+
+body.dark-theme .main-footer {
+    background: #420D32;
+}
+
+body.dark-theme .footer-container a,
+body.dark-theme .footer-container p {
+    color: #ffffff;
+}
+
+
+
+.nav-menu {
+  z-index: 999; /* تأكد أنها فوق العناصر */
+  font-size: 14px; /* حجم خط أصغر */
+  padding: 8px;
+  row-gap: 6px;
+}
+
+.nav-menu a {
+  padding: 10px 15px;
+  border-radius: 12px;
+  font-size: 14px;
+}
+
+/* ↓↓↓ خفض المسافة العلوية للهيدر عشان ما يتزاحم */
+.header-container {
+  padding: 8px 15px;
+}

@@ -1,0 +1,174 @@
+caption{
+	caption-side: top;
+    text-align: left; 
+    font-weight: bold; 
+    font-size: 18px; 
+    padding: 10px; 
+}
+
+.coach-img img {
+	 margin-top: 80px;
+    width: 120px;  
+    height: 120px; 
+    border-radius: 50%; 
+    border: 3px solid #ccc;
+    justify-content: center;
+    margin-bottom: -10px; 
+}
+
+.coach-img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: -10px; 
+	margin-left: -700px;
+}
+
+.coach1-img img {
+	 margin-top: 10px;
+    width: 120px;  
+    height: 120px; 
+    border-radius: 50%; 
+    border: 3px solid #ccc;
+    justify-content: center;
+    margin-bottom: -10px; 
+}
+
+.coach1-img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: -10px; 
+	margin-left: -700px;
+}
+
+table,th, td{
+	border:2px solid  black;
+	text-align:center;
+    margin: 0 auto;
+    table-layout: fixed;
+    margin-top: 10px;
+	margin-bottom: 100px;
+}
+
+thead{ 
+	color:black; 
+	background:#e8f0fa;
+}
+td.gray {
+    background-color: #d3d3d3;
+}
+td.blue{
+	background-color:#e8f0fa;
+}
+
+.pink{
+   background-color:#fadadd;
+}
+
+.coach2-img img {
+    width: 120px;  
+    height: 120px; 
+    border-radius: 50%; 
+    border: 3px solid #ccc;
+    justify-content: center;
+    margin-bottom: -10px; 
+}
+
+.coach2-img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: -10px; 
+	margin-left: -650px;
+}
+
+.coach3-img img {
+    width: 120px;  
+    height: 120px; 
+    border-radius: 50%; 
+    border: 3px solid #ccc;
+    justify-content: center;
+    margin-bottom: -10px; 
+}
+
+.coach3-img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: -10px; 
+	margin-left: -650px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+table {
+    scroll-margin-top: 150px; 
+}
+
+/* ✅ [Responsive] جدول يتمدد بالجوال */
+@media (max-width: 768px) {
+    table {
+        display: block;
+        overflow-x: auto;
+        width: 100%;
+    }
+
+    /* ✅ [Responsive] تنسيق صور المدربين */
+    .coach-img, .coach1-img, .coach2-img, .coach3-img {
+        margin-left: 0;
+        align-items: center;
+        text-align: center;
+    }
+
+    .coach-img img, .coach1-img img, .coach2-img img, .coach3-img img {
+        width: 100px;
+        height: 100px;
+    }
+
+    /* ✅ [Responsive] تبسيط شريط breadcrumb */
+    .breadcrumb {
+        font-size: 14px;
+        padding: 5px;
+    }
+}
+.week-box {
+  background-color: #C2CBC6;
+  color: #fff;
+  font-size: 20px;
+  
+  padding: 15px 25px;
+  margin: 20px auto;
+  width: fit-content;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body.dark-theme table,
+body.dark-theme th,
+body.dark-theme td {
+    border: 2px solid #aaa;
+    background-color: #2f2a35;
+    color: white;
+}
+
+body.dark-theme thead {
+    background-color: #42364a;
+    color: white;
+}
+
+body.dark-theme td.gray {
+    background-color: #4e4e4e;
+}
+
+body.dark-theme td.blue {
+    background-color: #6d6d85;
+}
+
+body.dark-theme .pink,
+body.dark-theme td.pink {
+    background-color: #774f6a;
+    color: white;
+}

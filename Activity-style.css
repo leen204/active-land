@@ -1,0 +1,206 @@
+.activities-container {
+   display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 70px;
+    margin-bottom: 80px;
+}
+
+.activity {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-decoration: none;
+    color: inherit;
+    background-color: #EAE3D8;
+    border: 2px solid #EAE3D8;
+    border-radius: 20px;
+    width: 380px; 
+    height: 460px;
+	opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.activity img {
+    width: 100%;
+    height: 390px;  
+    object-fit: cover;
+    object-position: center;
+	border-radius: 20px;
+    align-self: start;
+}
+
+
+.activity-title {
+    font-size: 18px;
+    font-weight: 200; ;
+    margin-top: 4px;
+}
+
+.activity-description {
+    font-size: 14px;
+    color: #333;
+    margin-top: 5px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out;
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.activity:hover {
+    transform: scale(1.05);
+}
+
+.activity:hover .activity-description {
+    opacity: 1;
+    visibility: visible;
+}
+.container {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: left; 
+}
+.activity-image {
+   display: block; 
+    margin: 20px auto; 
+    width: 100%; 
+    max-width: 600px; 
+    border-radius: 10px;
+}
+
+
+.coach-container {
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    gap: 20px; 
+    margin-top: 20px;
+    margin-bottom: 30px;
+    text-align: left; 
+}
+
+
+.coach-image {
+	float:left;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 3px solid #007BFF;
+	 margin-left: -150px;
+}
+
+
+.coach-name {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px; 
+}
+
+.coach-description {
+    font-size: 16px;
+
+    line-height: 1.6; 
+    max-width: 500px; 
+} 
+
+
+.register-btn {
+    background: #c4cac4; 
+    color: white; 
+    padding: 12px 30px; 
+    border: none; 
+    border-radius: 10px; 
+    text-align: center;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto; 
+    transition: background 0.3s ease;
+	    text-decoration: none; 
+
+}
+
+.register-btn:hover {
+    background: #aeb5af; 
+}
+
+
+
+
+
+.back-btn {
+    display: inline-block;
+    margin-top: 5px; 
+    margin-right: 10px; 
+    text-decoration: none;
+    color: white;
+    background-color: #6c757d;
+    padding: 8px 10px;
+    border-radius: 10px;
+    font-size: 10px;
+    font-weight: bold;
+	width:120px;
+}
+
+
+.back-btn:hover {
+    background-color: #545b62;
+}
+p,.coach-container {
+    text-align: center;
+    margin-left: 20px; 
+}
+.objective-list, .requirements-list {
+    text-align: center; 
+    list-style-position: inside; 
+    padding-left: 0; 
+}
+
+
+.objective-list li, .requirements-list li {
+    margin-bottom: 10px; 
+    display: inline-block; 
+    text-align: center;
+    width: 100%; 
+	 margin-bottom: 30px;
+	 line-height: 1.8;
+	  margin-bottom: 20px;
+}
+p {
+    margin-bottom: 20px; 
+}
+
+
+
+ caption{
+	 caption-side: inline-start;
+    text-align: left; 
+    font-weight: bold; 
+    font-size: 18px; 
+    padding: 10px; 
+
+ }
+ body.dark-theme .activity {
+    background-color: #4C104F;
+    border: 2px solid #4C104F;
+    color: white;
+}
+
+.activity.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

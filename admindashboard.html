@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"> 
+    <link rel="stylesheet" href="style.css"> 
+	<script src="theme-toggle.js"></script>
+
+    <title>Kids Manage</title>
+
+    <style>
+        /* ====== Light Theme ====== */
+body {
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #C2CBC6;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-buttons button {
+    background-color: #E6D3CD;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.container {
+    padding: 20px;
+    text-align: center;
+}
+
+.card {
+    background: white;
+    border: 2px solid #DAC9BA;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 15px auto;
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+input {
+    padding: 5px;
+    margin: 5px;
+    border: 1px solid #D3D4C5;
+    border-radius: 5px;
+    width: 150px;
+}
+
+.footer {
+    background-color: #C2CBC6;
+    padding: 10px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.tabs {
+    display: flex;
+    gap: 10px;
+    margin: 20px;
+}
+
+.tabs button {
+    padding: 10px 15px;
+    border: 1px solid #aaa;
+    border-radius: 20px;
+    background: #AEB5AF;
+    cursor: pointer;
+    color: white;
+}
+
+.tabs button.active {
+    background: #555;
+    color: white;
+}
+
+#more-btn {
+    background-color: #AEB5AF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.extra-kids {
+    display: none;
+}
+
+/* ====== Media Query ====== */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .card {
+        width: 90%;
+        flex-direction: column;
+        text-align: left;
+    }
+
+    .card div {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .tabs {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tabs button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: #C2CBC6;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 10px;
+    }
+
+    #menu-toggle:checked + .nav-menu {
+        display: flex;
+    }
+}
+
+/* ====== Dark Theme using #420D32 and #5D2048 ====== */
+
+
+/* Header & Navigation */
+
+
+/* Tabs & Buttons */
+.dark-theme .tabs button,
+.dark-theme #more-btn,
+.dark-theme .nav-buttons button {
+    background-color: #420D32;
+    color: #ffffff;
+    border: none;
+}
+
+.dark-theme .tabs button:hover,
+.dark-theme #more-btn:hover,
+.dark-theme .nav-buttons button:hover {
+    background-color: #5D2048;
+}
+
+/* Card Boxes */
+.dark-theme .card {
+    background-color: #420D32;
+    color: #ffffff;
+    border: 1px solid #5D2048;
+}
+
+/* Inputs */
+.dark-theme input {
+    background-color: #2e2e2e;
+    color: #ffffff;
+    border: 1px solid #5D2048;
+}
+
+/* Links */
+.dark-theme a {
+    color: #ddd;
+}
+
+.dark-theme a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+		
+		
+		
+		
+    </style>
+</head>
+<body>
+
+<header class="main-header">
+    <div class="header-container">
+        <a href="homepage.html" class="logo"><img src="images/active-land-logo.png" alt="Active Land Logo"></a> 
+
+        <input type="checkbox" id="menu-toggle" style="display: none;">
+        <label for="menu-toggle" class="menu-toggle"><i class="fa fa-bars"></i></label>
+
+        <nav class="nav-menu">
+            <a href="activities.html" accesskey="a" title="Alt + A">Activities</a>
+            <a href="coaches.html" accesskey="c" title="Alt + C">Coaches</a>
+            <a href="admindashboard.html" accesskey="d" title="Alt + D">Administrator</a>
+            <a href="parent-dashboard.html" accesskey="p" title="Alt + P">Parent</a>
+        </nav>
+
+        <div class="auth-container">
+            <div class="user-profile" tabindex="0">
+                <button class="profile-btn">
+                    <i class="fa-solid fa-user"></i> 
+                </button>
+                <div class="dropdown-menu">
+                    <a href="profile.html">View Profile</a>
+                </div>
+            </div>
+        </div>   
+    </div>
+</header>
+
+<main>
+    <nav class="breadcrumb">
+        <a href="homepage.html">Home</a> → <a href="admindashboard.html">Kids Manage</a>
+        <hr>
+    </nav>
+
+    <div class="tabs">
+        <button onclick="location.href='admindashboard.html'">Kids Manage</button>
+        <button onclick="location.href='admin-activitys.html'">Activities</button>
+        <button onclick="location.href='admin-coachs.html'">Coaches</button>
+    </div>
+
+    <div class="container">
+        <h2>Kids Manage</h2>
+
+        <div class="card">
+            <div><strong>Kid's Name:</strong> Ahmed Ali</div>
+            <div><strong>Parents:</strong></div>
+            <div>Father: Ali</div>
+            <div>Mother: Fatima</div>
+            <div><strong>Phone:</strong> +96612345648</div>
+        </div>
+
+        <div class="card">
+            <div><strong>Kid's Name:</strong> Omar Saad</div>
+            <div><strong>Parents:</strong></div>
+            <div>Father: Saad</div>
+            <div>Mother: Rahaf</div>
+            <div><strong>Phone:</strong> +966124435769</div>
+        </div>
+
+        <div class="card extra-kids">
+            <div><strong>Kid's Name:</strong> Rayyan Omar</div>
+            <div><strong>Parents:</strong></div>
+            <div>Father: Omar</div>
+            <div>Mother: Sana</div>
+            <div><strong>Phone:</strong> +966147390239</div>
+        </div>
+
+        <div class="card extra-kids">
+            <div><strong>Kid's Name:</strong> Lana Fahad</div>
+            <div><strong>Parents:</strong></div>
+            <div>Father: Fahad</div>
+            <div>Mother: Mona</div>
+            <div><strong>Phone:</strong> +96612345776</div>
+        </div>
+
+        <button id="more-btn" onclick="showMore()">More</button>
+    </div>
+</main>
+
+<footer class="main-footer">
+    <div class="footer-container">
+        <a href="mailto:activeland@gmail.com"><i class="fa-solid fa-envelope"></i> activeland@gmail.com</a>
+        <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i> activeland@</a>
+        <a href="tel:+996555555"><i class="fa-solid fa-phone"></i> +996555555</a>
+    </div>
+</footer>
+
+<script>
+    function showMore() {
+        const hiddenCards = document.querySelectorAll('.extra-kids');
+        hiddenCards.forEach(card => card.style.display = 'flex');
+        document.getElementById('more-btn').style.display = 'none';
+    }
+</script>
+
+</body>
+</html>

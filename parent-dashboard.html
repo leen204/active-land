@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parent Dashboard</title>
+	    <link rel="stylesheet" href="style.css">
+		  <link rel="stylesheet" href="styleR.css">
+		 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+		 <script src="theme-toggle.js"></script>
+
+    <style>
+        h1{
+            width: fit-content;
+        }
+		
+.delete-button {
+  margin-top: 100px;
+  padding: 10px 20px;
+  background-color: #3a3a3a;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.delete-button:hover {
+  background-color: #1f1f1f;
+  transform: scale(1.05);
+}
+.kid-info p {
+  color: #2D2D2D; /* لون غامق وواضح */
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.kid-info strong {
+  color: #111111; /* لون أغمق لتمييز العناوين */
+  font-weight: 700;
+}
+.dark-theme .kid-card {
+    background-color: #420D32;
+    border: 2px solid #420D32;
+    color: white;
+}
+
+.dark-theme .kid-info p,
+.dark-theme .kid-info strong {
+    color: white;
+}
+
+/* أزرار تسجيل طفل جديد وغيره */
+.dark-theme .sub-nav button {
+    background-color: #5D2048;
+    border: 2px solid #5D2048;
+    color: #fff;
+}
+
+.dark-theme .sub-nav button:hover {
+    background-color: #3a0d3d;
+}
+
+
+		
+    </style>
+</head>
+<body>
+<header class="main-header">
+    <div class="header-container">
+        <a href="homepage.html" class="logo"><img src="images/active-land-logo.png" alt="Active Land Logo"></a>
+        
+        
+        <input type="checkbox" id="menu-toggle" style="display: none;">
+        <label for="menu-toggle" class="menu-toggle"><i class="fa fa-bars"></i></label>
+
+         <nav class="nav-menu">
+           
+  <a href="activities.html" accesskey="a" title="Alt + A">Activities</a>
+  <a href="coaches.html" accesskey="c" title="Alt + C">Coaches</a>
+  <a href="admindashboard.html" accesskey="d" title="Alt + D">Administrator</a>
+  <a href="parent-dashboard.html" accesskey="p" title="Alt + P">Parent</a>
+</nav>
+       <div class="auth-container">
+    <div class="user-profile" tabindex="0">
+        <button class="profile-btn">
+            <i class="fa-solid fa-user"></i> 
+        </button>
+        <div class="dropdown-menu">
+            <a href="profile.html">View Profile</a>
+        </div>
+    </div>
+</div>   
+    </div>
+</header>
+
+ <nav class="breadcrumb">
+            <a href="homepage.html">Home</a> →  <a href="parent-dashboard.html">Parent Dashboard</a> 
+			<hr>
+        </nav>
+    <main>
+       
+
+        <div class="sub-nav">
+            <button onclick="location.href='Register-a-New-kid.html'">Register a New Kid</button>
+            <button onclick="location.href='ActivityEnrollment.html'">Activity Enrollment</button>
+            <button onclick="location.href='evaluation.html'">Activity Evaluation</button>
+        </div>
+
+
+
+        <h1>My Kids</h1>
+        <section class="filter-container">
+            <label for="age-select">Sort by:</label>
+    <select id="age-select">
+        <option value="name-asc">Name A-Z</option>
+        <option value="name-desc">Name Z-A</option>
+        <option value="age-asc">Age Ascending</option>
+        <option value="age-desc">Age Descending</option>
+    </select>
+        </section>
+
+        <section class="kids-list" id="kids-list">
+            
+        </section>
+    
+    </main>
+
+   
+<footer class="main-footer">
+    <div class="footer-container">
+        
+        <div class="contact-icons">
+            <a href="mailto:activeland@gmail.com" class="contact-item">
+                <i class="fa-solid fa-envelope"></i> activeland@gmail.com
+            </a>
+            <br>
+            <a href="https://www.instagram.com/" target="_blank" class="contact-item">
+                <i class="fa-brands fa-instagram"></i> activeland@
+            </a>
+            <br>
+            <a href="tel:+996555555" class="contact-item">
+                <i class="fa-solid fa-phone"></i> +996555555
+            </a>
+        </div>
+    </div>
+</footer>
+  
+<script src="parent-dashboard.js"></script>
+</body>
+</html>
+
+v
