@@ -1,0 +1,363 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+ 
+    <link rel="stylesheet" href="style.css">
+	   <link rel="stylesheet" href="homePageStyle.css">
+
+
+
+
+
+
+ <title> active land</title>
+</head>
+<body>
+
+
+
+
+<main>
+
+
+<header class="main-header">
+
+    <div class="header-container">
+	
+        <a href="homepage.html" class="logo"><img src="images/active-land-logo.png" alt="Active Land Logo"></a>
+
+        
+        <input type="checkbox" id="menu-toggle" style="display: none;">
+        <label for="menu-toggle" class="menu-toggle"><i class="fa fa-bars"></i></label>
+
+        <nav class="nav-menu">
+           
+  <a href="activities.html" accesskey="a" title="Alt + A">Activities</a>
+  <a href="coaches.html" accesskey="c" title="Alt + C">Coaches</a>
+  <a href="admindashboard.html" accesskey="d" title="Alt + D">Administrator</a>
+  <a href="parent-dashboard.html" accesskey="p" title="Alt + P">Parent</a>
+</nav>
+
+			
+
+    <!-- ✅ الأزرار الجانبية (زر الثيم والبروفايل) -->
+    <div class="auth-container">
+  <!-- زر الوضع الليلي -->
+  <label class="theme-switch">
+    <input type="checkbox" id="theme-switch">
+    <span class="slider"></span>
+  </label>
+
+ 
+
+
+<!--<input type="checkbox" id="theme-switch" style="width: 50px; height: 25px;">-->
+
+    
+
+
+		
+<div class="auth-container">
+    <div class="user-profile" tabindex="0">
+        <button class="profile-btn">
+            <i class="fa-solid fa-user"></i> 
+        </button>
+        <div class="dropdown-menu">
+            <a href="profile.html">View Profile</a>
+        </div>
+    </div>
+</div>
+
+    
+</header>
+
+
+
+<section class="vision-section">
+    <div class="vision-container">
+        <div class="vision-image">
+            <img src="images/KidsImage.jpeg" alt="Vision Image">
+        </div>
+
+        <div class="vision-content">
+            <h2 class="vision-title">Vision</h2>
+
+            <div class="vision-text-box">
+                <p>Activity Land – Where adventure and creativity come to life!  A platform that connects children with inspiring activities and expert coaches, helping them grow, explore, and create unforgettable memories!
+</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<section class="activities-section">
+    <h2 class="section-title">Explore Our Activities</h2>
+
+    <div class="activities-box">
+        <div class="filter-bar">
+            <input type="radio" id="all" name="filter" checked>
+            <label for="all" class="filter-btn">All Categories</label>
+
+            <input type="radio" id="sports" name="filter">
+            <label for="sports" class="filter-btn">Sports</label>
+
+            <input type="radio" id="art" name="filter">
+            <label for="art" class="filter-btn">Art</label>
+
+            
+        </div>
+
+        <hr>
+
+        <div class="activities-container">
+            <div class="activities-wrapper">
+               <a href="gymnastics.html" class="activity-card sports">
+
+                    <img src="images/Gymnastics.jpg" alt="Gymnastics" class="activity-image">
+                    <div class="activity-info">
+                        <h3 class="activity-title">Gymnastics</h3>
+                        <p class="activity-description">Improve flexibility and strength.</p>
+                        <p class="activity-time">12:00-1:00 PM for SUN and MON </p>
+                    </div>
+                </a>
+
+                <a href="swimming.html" class="activity-card sports">
+                    <img src="images/Swimming.jpg" alt="Swimming" class="activity-image">
+                    <div class="activity-info">
+                        <h3 class="activity-title">Swimming</h3>
+                        <p class="activity-description">Learn water safety and swimming <br>techniques.</p>
+                        <p class="activity-time">8:00 AM - 9:00 AM | Sunday</p>
+                    </div>
+                </a>
+
+                <a href="dance.html" class="activity-card art">
+                    <img src="images/Dancing.jpg" alt="Dancing" class="activity-image">
+                    <div class="activity-info">
+                        <h3 class="activity-title">Dancing</h3>
+                        <p class="activity-description">Express yourself through movement.</p>
+                        <p class="activity-time">2:00 AM - 3:00 AM |<br> SUN , MON ,TUE </p>
+                    </div>
+                </a>
+
+                <a href="art.html" class="activity-card art">
+                    <img src="images/Art.jpg" alt="Art Class" class="activity-image">
+                    <div class="activity-info">
+                        <h3 class="activity-title">Art Class</h3>
+                        <p class="activity-description">Unleash your creativity.</p>
+                        <p class="activity-time"> 10:00-11:00 AM TUE <br>12:00-1:00 PM for SUN</p>
+                    </div>
+                </a>
+
+                <a href="yoga.html" class="activity-card art">
+                    <img src="images/Yoga.jpg" alt="Yoga" class="activity-image">
+                    <div class="activity-info">
+                        <h3 class="activity-title">Yoga</h3>
+                        <p class="activity-description">Enhance mind-body balance.</p>
+                        <p class="activity-time"> 8:00-9:00 AM TUE, WED</p>
+                    </div>
+                </a>
+
+                <a href="karate.html" class="activity-card sports">
+                    <img src="images/Karate.jpg" alt="Karate" class="activity-image">
+                    <div class="activity-info">
+                        <h3 class="activity-title">Karate</h3>
+                        <p class="activity-description">Self-defense and discipline training.</p>
+                        <p class="activity-time"> 10-11 AM for Fri and 2:00-3:00 PM</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+<section class="coaches-section">
+    <h2 class="section-title">Our Professional Trainers</h2>
+    
+    <div class="coaches-container">
+        <div class="coach-card">
+            <div class="coach-image">
+                <img src="images/khalid.jpg" alt="Coach Name">
+            </div>
+            <div class="coach-info">
+                <h3 class="coach-name">khalid</h3>
+                <p class="coach-description">A seasoned expert in football training with over 10 years of experience, also specializing in karate and basketball. .</p>
+            </div>
+        </div>
+
+        <div class="coach-card">
+            <div class="coach-image">
+                <img src="images/maha.jpg" alt="Coach Name">
+            </div>
+            <div class="coach-info">
+                <h3 class="coach-name">maha</h3>
+                <p class="coach-description">Passionate art instructor, inspiring creativity and self-expression through engaging and interactive lessons. .</p>
+            </div>
+        </div>
+
+        <div class="coach-card">
+            <div class="coach-image">
+                <img src="images/Mike.jpg" alt="Coach Name">
+            </div>
+            <div class="coach-info">
+                <h3 class="coach-name">Mike Johnson</h3>
+                <p class="coach-description">
+Swimming, Tennis & Handball Coach – Expert in swimming (12+ years), tennis (10+ years), and handball (12+ years), helping kids build confidence and athletic skills.
+</p>
+            </div>
+        </div>
+
+        <div class="coach-card">
+            <div class="coach-image">
+                <img src="images/Emily.jpg" alt="Coach Name">
+            </div>
+            <div class="coach-info">
+                <h3 class="coach-name">Emily Brown</h3>
+                <p class="coach-description">ymnastics, Cycling & Ballet Trainer – Focuses on flexibility, strength, and endurance through gymnastics, cycling, and ballet (10+ years)..</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="more-button-container">
+        <a href="coaches.html" class="more-button">More </a>
+    </div>
+</section>
+
+
+
+
+<section class="comments-section">
+  <h2 class="section-title">Parents & Kids Speak – See what they love about Activity Land</h2>
+
+  <div class="comments-container">
+    <div class="comment-card" data-name="Sarah" data-rating="⭐⭐⭐⭐" data-feedback="My kid had an amazing experience in the football training!">
+      <div class="comment-user">
+        <img src="images/profile-boy.jpeg" alt="User Image">
+      </div>
+      <div class="comment-text">
+        <p class="comment-preview">My kid had an amazing experience...</p>
+        <div class="review-popup"></div>
+      </div>
+    </div>
+
+    <div class="comment-card" data-name="Ali's Mom" data-rating="⭐⭐⭐⭐⭐" data-feedback="The coaches are really professional and my child enjoyed the activities.">
+      <div class="comment-user">
+        <img src="images/profil.jpeg" alt="User Image">
+      </div>
+      <div class="comment-text">
+        <p class="comment-preview">The coaches are really professional...</p>
+        <div class="review-popup"></div>
+      </div>
+    </div>
+
+    <div class="comment-card" data-name="Lina" data-rating="⭐⭐⭐" data-feedback="Creative and fun! My daughter learned a lot from the art classes.">
+      <div class="comment-user">
+        <img src="images/2.jpeg" alt="User Image">
+      </div>
+      <div class="comment-text">
+        <p class="comment-preview">Creative and fun! My daughter...</p>
+        <div class="review-popup"></div>
+      </div>
+    </div>
+  </div>
+
+  <form class="add-comment-container">
+    <details>
+      <summary class="add-comment-btn">+ Add Comments</summary>
+      <input type="text" id="parentName" placeholder="Your Name" required style="margin-top:10px; border-radius:10px; padding:8px; width:100%; max-width:400px;">
+      <select id="rating" required style="margin-top:10px; border-radius:10px; padding:8px; width:100%; max-width:400px;">
+        <option value="">Rate the experience</option>
+        <option value="⭐">⭐</option>
+        <option value="⭐⭐">⭐⭐</option>
+        <option value="⭐⭐⭐">⭐⭐⭐</option>
+        <option value="⭐⭐⭐⭐">⭐⭐⭐⭐</option>
+        <option value="⭐⭐⭐⭐⭐">⭐⭐⭐⭐⭐</option>
+      </select>
+      <textarea placeholder="Write your comment..." required></textarea>
+      <button type="submit" class="submit-comment-btn">Submit</button>
+    </details>
+  </form>
+</section>
+
+  </main>
+
+
+
+
+
+<footer class="main-footer">
+    <div class="footer-container">
+        <div class="contact-icons">
+            <a href="mailto:activeland@gmail.com" class="contact-item">
+                <i class="fa-solid fa-envelope"></i> activeland@gmail.com
+            </a>
+            <br>
+            <a href="https://www.instagram.com/" target="_blank" class="contact-item">
+                <i class="fa-brands fa-instagram"></i> activeland@
+            </a>
+            <br>
+            <a href="tel:+996555555" class="contact-item">
+                <i class="fa-solid fa-phone"></i> +996555555
+            </a>
+        </div>
+    </div>
+</footer>
+  
+  
+<script src="theme-toggle.js"></script>
+<script>
+  const toggle = document.getElementById('theme-switch');
+
+  function applyTheme(theme) {
+    document.body.classList.remove('dark-theme', 'light-theme');
+    document.body.classList.add(`${theme}-theme`);
+    localStorage.setItem('theme', theme);
+    toggle.checked = theme === 'dark';
+  }
+
+  toggle.addEventListener('change', () => {
+    applyTheme(toggle.checked ? 'dark' : 'light');
+  });
+
+  window.addEventListener('DOMContentLoaded', () => {
+    const saved = localStorage.getItem('theme') || 'light';
+    applyTheme(saved);
+  });
+  
+  
+  
+  
+  document.querySelectorAll('input[name="filter"]').forEach((radio) => {
+    radio.addEventListener('change', function () {
+      const selectedCategory = this.id;
+      document.querySelectorAll('.activity-card').forEach(card => {
+        if (selectedCategory === "all" || card.classList.contains(selectedCategory)) {
+          card.style.display = "block";
+        } else {
+          card.style.display = "none";
+        }
+      });
+    });
+  });
+</script>
+
+ <script src="comments.js"></script>
+ <script src="HomePage.js"></script>
+	<script src="theme-toggle.js"></script>
+
+</body>
+</html>
+
