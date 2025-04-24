@@ -32,13 +32,13 @@ function deleteKid(name) {
     if (confirm(`Are you sure you want to delete ${name}?`)) {
         let kids = JSON.parse(localStorage.getItem("kids")) || [];
 
-        // نحذف الطفل اللي اسمه مطابق
+        
         const updatedKids = kids.filter(kid => kid.name !== name);
 
-        // نحدث التخزين
+        
         localStorage.setItem("kids", JSON.stringify(updatedKids));
 
-        // نعيد التحميل الكامل من التخزين عشان الترتيب ما ينخرب
+        
         loadKids();
     }
 }
@@ -64,7 +64,7 @@ sortSelect.addEventListener('change', () => {
 window.addEventListener('load', () => {
     let kids = JSON.parse(localStorage.getItem('kids'));
 
-    // ✅ إذا localStorage فاضي، نحط 3 أطفال افتراضيين
+   
     if (!kids || kids.length === 0) {
         kids = [
             {
