@@ -14,6 +14,7 @@
             background-color: #f5f5f5;
             margin: 0;
             padding: 0;
+			
         }
         
 
@@ -50,6 +51,7 @@
             background: white;
             border: 2px solid #ddd;
             border-radius: 10px;
+			
         }
         .coach-card input {
             padding: 5px;
@@ -91,6 +93,35 @@
 .schedule-btn:hover {
     background: #bbb; 
 }
+/* الخلفية الأساسية */
+body.dark-theme {
+    background-color: #0b0c1a;
+    color: #f5f5f5;
+}
+
+/* ترويسة الموقع والتنقل */
+.dark-theme header,
+.dark-theme .header-container,
+.dark-theme nav,
+.dark-theme .nav-menu {
+    color: #f5f5f5;
+}
+
+/* الأزرار */
+.dark-theme button,
+.dark-theme .btn {
+    background-color: #5D2048;
+    color: #f5f5f5;
+    border: #5D2048;
+}
+
+.dark-theme button:hover,
+.dark-theme .btn:hover {
+border: #7A3664;
+    background-color: #7A3664;
+	
+}
+
 /* وضع الدارك مود للصفحة الخاصة بالمدربين */
 
 
@@ -98,30 +129,17 @@
 
 /* الكروت */
 .dark-theme .coach-card {
-    background-color: #4a1a57;
+    background-color: #420D32;
     color: #f5f5f5;
-    border: 1px solid #333;
+    border: 1px solid #420D32;
 }
 
-/* الأزرار */
-.dark-theme .schedule-btn {
-    background-color: #5b2671;
-    color: #f5f5f5;
-}
 
-.dark-theme .schedule-btn:hover {
-    background-color: #6f2d85;
-}
 
-/* التبويبات */
-.dark-theme .tabs button {
-    background-color: #4a1a57;
-    color: #f5f5f5;
-    border-color: #6f2d85;
-}
+
 
 .dark-theme .tabs button.active {
-    background-color: #6f2d85;
+    background-color: #5D2048;
     color: #ffffff;
 }
 
@@ -129,16 +147,25 @@
 
 /* الروابط */
 .dark-theme a {
+background-color: #5D2048;
     color: #cfcfcf;
 }
 
 .dark-theme a:hover {
-    color: #ffffff;
+    color: #7A3664;
     text-decoration: underline;
 }
 
 
+
     </style>
+	<script>
+  function toggleList(element) {
+    const innerList = element.closest('.coach-card').querySelector('.inner-list');
+    innerList.style.display = innerList.style.display === 'block' ? 'none' : 'block';
+  }
+</script>
+
 </head>
 <body>
 
@@ -150,7 +177,7 @@
 
        <nav class="nav-menu">
            
-  <a href="Activities.html" accesskey="a" title="Alt + A">Activities</a>
+  <a href="activities.html" accesskey="a" title="Alt + A">Activities</a>
   <a href="coaches.html" accesskey="c" title="Alt + C">Coaches</a>
   <a href="admindashboard.html" accesskey="d" title="Alt + D">Administrator</a>
   <a href="parent-dashboard.html" accesskey="p" title="Alt + P">Parent</a>
@@ -180,19 +207,93 @@
     <button onclick="location.href='admin-coachs.html'">Coaches</button>
 </div>
 <div class="coach-container">
-    <div class="coach-card"> Khalid 
-        <a href="schedule.html#Khalid" class="schedule-btn">Schedule <i class="fa fa-arrow-right"></i></a>
+
+<div class="coach-card" onclick="toggleList(this)">
+  <div style="width: 100%;">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+      <span style="font-weight: bold;">Khalid</span>
+
+<a href="schedule.html#Khalid" class="schedule-btn" onclick="event.stopPropagation()">
+  Schedule <i class="fa fa-arrow-right"></i>
+</a>
+      </div>
+      <div class="inner-list" style="display: none;">
+        <strong>Activities:</strong>
+        <ul>
+          <li>Football</li>
+          <li>Karate</li>
+          <li>Basketball</li>
+        </ul>
+      </div>
     </div>
-    <div class="coach-card"> Maha 
-        <a href="schedule.html#Maha" class="schedule-btn">Schedule <i class="fa fa-arrow-right"></i></a>
+  </div>
+
+ <div class="coach-card" onclick="toggleList(this)">
+  <div style="width: 100%;">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+      <span style="font-weight: bold;"> Maha</span>
+
+		<a href="schedule.html#Maha" class="schedule-btn" onclick="event.stopPropagation()">
+  Schedule <i class="fa fa-arrow-right"></i>
+</a>
+
+      </div>
+      <div class="inner-list" style="display: none;">
+        <strong>Activities:</strong>
+        <ul>
+          <li>Yoga</li>
+          <li>Art Class</li>
+          <li>Dance Class</li>
+        </ul>
+      </div>
     </div>
-    <div class="coach-card"> Mike Johnson 
-        <a href="Schedule.html#Mike" class="schedule-btn">Schedule <i class="fa fa-arrow-right"></i></a>
+  </div>
+
+ <div class="coach-card" onclick="toggleList(this)">
+  <div style="width: 100%;">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+      <span style="font-weight: bold;">Mike Johnson</span>
+		<a href="schedule.html#Mike" class="schedule-btn" onclick="event.stopPropagation()">
+  Schedule <i class="fa fa-arrow-right"></i>
+</a>
+
+      </div>
+
+      <div class="inner-list" style="display: none;">
+        <strong>Activities:</strong>
+        <ul>
+          <li>Swimming</li>
+          <li>Tennis</li>
+          <li>Handball</li>
+        </ul>
+      </div>
     </div>
-    <div class="coach-card"> Emily Brown 
-        <a href="Schedule.html#Emily" class="schedule-btn">Schedule <i class="fa fa-arrow-right"></i></a>
+  </div>
+
+<div class="coach-card" onclick="toggleList(this)">
+  <div style="width: 100%;">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+      <span style="font-weight: bold;">Emily Brown</span>
+      <a href="schedule.html#Emily" class="schedule-btn" onclick="event.stopPropagation()">
+        Schedule <i class="fa fa-arrow-right"></i>
+      </a>
     </div>
+
+    <div class="inner-list activity-box" style="display: none;">
+      <strong>Activities:</strong>
+      <ul>
+        <li>Ballet</li>
+        <li>Gymnastics</li>
+        <li>Cycling</li>
+      </ul>
+    </div>
+
+  </div>
 </div>
+
+
+</div>
+
 
 <footer class="main-footer">
     <div class="footer-container">
@@ -201,6 +302,15 @@
         <a href="tel:+996555555"><i class="fa-solid fa-phone"></i> +996555555</a>
     </div>
 </footer>
+<script>
+  function toggleList(card) {
+    const innerList = card.querySelector('.inner-list');
+    if (innerList) {
+      innerList.style.display = innerList.style.display === 'block' ? 'none' : 'block';
+    }
+  }
+</script>
 
 </body>
+
 </html>
