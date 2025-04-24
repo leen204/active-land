@@ -21,7 +21,7 @@ function displayKids(kidsArray) {
                 <p><strong>Gender:</strong> ${kid.gender}</p>
                 <p><strong>Enrolled Activities:</strong> ${kid.activities ? kid.activities.join(", ") : 'Not enrolled yet'}</p>
                 <p><strong>Coach Name:</strong> ${kid.coach ? kid.coach : 'Not assigned yet'}</p>
-                <button onclick="deleteKid('${kid.name}')" class="delete-button">🗑 Delete</button>
+                <button onclick="deleteKid('${kid.name}')" class="delete-button">🗑️ Delete</button>
             </div>
         `;
         kidsList.appendChild(kidCard);
@@ -29,7 +29,7 @@ function displayKids(kidsArray) {
 }
 
 function deleteKid(name) {
-    if (confirm(Are you sure you want to delete ${name}?)) {
+    if (confirm(`Are you sure you want to delete ${name}?`)) {
         let kids = JSON.parse(localStorage.getItem("kids")) || [];
 
         // نحذف الطفل اللي اسمه مطابق
@@ -123,8 +123,8 @@ function printKidInfo(kid) {
         <p><strong>Gender:</strong> ${kid.gender}</p>
         <p><strong>Phone:</strong> ${kid.phone}</p>
         <p><strong>Email:</strong> ${kid.email}</p>
-        ${kid.activities && kid.activities.length > 0 ? <p><strong>Enrolled Activities:</strong> ${kid.activities.join(", ")}</p> : ''}
-        ${kid.coach ? <p><strong>Coach Name:</strong> ${kid.coach}</p> : ''}
+        ${kid.activities && kid.activities.length > 0 ? `<p><strong>Enrolled Activities:</strong> ${kid.activities.join(", ")}</p>` : ''}
+        ${kid.coach ? `<p><strong>Coach Name:</strong> ${kid.coach}</p>` : ''}
         <br>
         <img src="${kid.image ? kid.image : 'images/kids-profile.jpeg'}" alt="Kid Photo" style="width:150px;height:150px;margin-top:10px;">
     `);
