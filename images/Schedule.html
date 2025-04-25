@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <meta charset="UTF-8">
+   <title>coatch schedule </title>
+   <link rel="stylesheet" href="Schedule.css">
+    <link rel="stylesheet" href="style.css">
+	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="schedule.js"></script>
+<script src="theme-toggle.js"></script>
+
+
+ </head>
+<body>
+<header class="main-header">
+    <div class="header-container">
+        <a href="homepage.html" class="logo"><img src="images/active-land-logo.png" alt="Active Land Logo"></a>
+        
+        
+        <input type="checkbox" id="menu-toggle" style="display: none;">
+        <label for="menu-toggle" class="menu-toggle"><i class="fa fa-bars"></i></label>
+  <nav class="nav-menu">
+           
+  <a href="Activities.html" accesskey="a" title="Alt + A">Activities</a>
+  <a href="coaches.html" accesskey="c" title="Alt + C">Coaches</a>
+  <a href="admindashboard.html" accesskey="d" title="Alt + D">Administrator</a>
+  <a href="parent-dashboard.html" accesskey="p" title="Alt + P">Parent</a>
+</nav>
+		
+
+       <div class="auth-container">
+    <div class="user-profile" tabindex="0">
+        <button class="profile-btn">
+            <i class="fa-solid fa-user"></i> 
+        </button>
+        <div class="dropdown-menu">
+            <a href="profile.html">View Profile</a>
+        </div>
+    </div>
+</div>   
+    </div>
+</header>
+
+<nav class="breadcrumb">
+    <a href="homepage.html">Home</a> →  <a href="coaches.html">coaches</a> → <a href="Schedule.html">schedule</a>
+    
+	<hr>
+</nav>
+<div id="week-start-date" class="week-box"></div>
+
+
+<div class="coach-img">
+    <img src="images/khalid.jpg" alt="Coach Image">
+    
+</div>
+
+ <table id="Khalid">
+ <caption>Coach Khalid</caption>
+ <thead>
+ <tr>
+ <th>coatch Time</th>
+ <th>Sunday</th>
+  <th>Monday</th>
+  <th>Tuesday</th>
+  <th>Wednesday</th>
+  <th>Thursday</th>
+  <th>Friday</th>
+  <th>Saturday</th>
+ </tr>
+ </thead>
+ <tr>
+  <td class="blue">8:00 AM - 9:00 AM</td>
+  <td>Football</td>
+  <td></td>
+  <td></td>
+  <td class="gray" rowspan="4"></td>
+  <td>Basketball <br> for +12 years</td>
+  <td></td>
+  <td class="gray"></td>
+ </tr>
+ 
+  <tr>
+   <td class="blue">10:00 AM - 11:00 AM</td>
+   <td></td>
+   <td></td>
+   <td></td>
+   <td></td>
+   <td >Karate <br> for +8 years</td>
+   <td></td>
+  </tr>
+  
+  
+  <tr>
+   <td class="blue">12:00 AM - 1:00 AM</td>
+   <td></td>
+   <td class="gray"></td>
+   <td  rowspan="2">Basketball <br> for +12 years</td>
+   <td></td>
+   <td></td>
+   <td>Basketball</td>
+  </tr>
+  
+  
+  <tr>
+    <td class="blue">2:00 PM - 3:00 PM</td>
+    <td>Football</td>
+    <td >Karate <br> for +8 years</td>
+    <td class="gray"> </td>
+    <td></td>
+    <td class="gray"></td>
+    
+  </tr>
+ </table>
+
+
+<div class="coach1-img">
+    <img src="images/Mike.jpg" alt="Coach Image">
+   
+</div>
+
+
+<table id="Mike">
+<caption>Coach Mike</caption>
+ <thead>
+ <tr>
+ <th>coatch Time</th>
+ <th>Sunday</th>
+  <th>Monday</th>
+  <th>Tuesday</th>
+  <th>Wednesday</th>
+  <th>Thursday</th>
+  <th>Friday</th>
+  <th>Saturday</th>
+ </tr>
+ </thead>
+ <tr>
+  <td class="blue">8:00 AM - 9:00 AM</td>
+  <td class="gray" colspan="4"></td>
+  <td>Handball  <br> for +12 years</td>
+  <td></td>
+  <td class="gray"></td>
+ </tr>
+ 
+  <tr>
+   <td class="blue">10:00 AM - 11:00 AM</td>
+   <td>swimming <br> for +12 years</td>
+   <td></td>
+   <td></td>
+   <td ></td>
+   <td></td>
+   <td >Tennis  <br> for +10 years</td>
+   <td ></td>
+  </tr>
+  
+  
+  <tr>
+   <td class="blue">12:00 PM- 1:00 PM</td>
+   <td></td>
+   <td></td>
+   <td  rowspan="2">swimming <br> for +12 years</td>
+   <td ></td>
+   <td></td>
+   <td></td>
+  
+   <td></td>
+  </tr>
+  
+  
+  <tr>
+    <td class="blue">2:00 PM - 3:00 PM</td>
+    <td>Tennis  <br> for +10 years </td>
+    <td class="gray"></td>
+    <td colspan="3" > Handball  <br> for +12 years</td>
+    <td class="gray"></td>
+    
+  </tr>
+ </table>
+
+
+<div class="coach2-img">
+    <img src="images/Maha.jpg" alt="Coach Image">
+
+</div>
+
+<table id="Maha">
+<caption>Coach Maha</caption>
+ <thead class="pink">
+ <tr>
+ <th>coatch Time</th>
+ <th>Sunday</th>
+  <th>Monday</th>
+  <th>Tuesday</th>
+  <th>Wednesday</th>
+  <th>Thursday</th>
+  <th>Friday</th>
+  <th>Saturday</th>
+ </tr>
+ </thead>
+ <tr>
+  <td class="pink">8:00 AM - 9:00 AM</td>
+  <td></td>
+  <td></td>
+  <td colspan="2">Yoga <br> for +10 years</td>
+  
+  <td class="gray"></td>
+  <td></td>
+  <td rowspan="2">Dance Class</td>
+ </tr>
+ 
+  <tr>
+   <td class="pink">10:00 AM - 11:00 AM</td>
+   <td></td>
+   <td class="gray"></td>
+   <td>Art Class</td>
+   <td></td>
+   <td>Yoga <br> for +10 years</td>
+   <td ></td>
+ 
+  </tr>
+  
+  
+  <tr>
+   <td class="pink">12:00 PM - 1:00 PM</td>
+   <td>Art Class</td>
+   <td ></td>
+   <td></td>
+   <td></td>
+   <td></td>
+   <td class="gray" colspan="2"></td>
+  </tr>
+  
+  
+  <tr>
+    <td class="pink">2:00 PM - 3:00 PM</td>
+    <td colspan="3">Dance Class</td>
+    <td></td>
+    <td></td>
+    <td>Yoga <br> for +10 years</td>
+    <td></td>
+    
+  </tr>
+ </table>
+ 
+ 
+ 
+ <div class="coach3-img">
+    <img src="images/Emily.jpg" alt="Coach Image">
+</div>
+ 
+ <table id="Emily">
+ <caption>Coach Emily</caption>
+ <thead class="pink">
+ <tr>
+ <th>coatch Time</th>
+ <th>Sunday</th>
+  <th>Monday</th>
+  <th>Tuesday</th>
+  <th>Wednesday</th>
+  <th>Thursday</th>
+  <th>Friday</th>
+  <th>Saturday</th>
+ </tr>
+ </thead>
+ <tr>
+  <td class="pink">8:00 AM - 9:00 AM</td>
+  <td></td>
+  <td></td>
+  <td>Ballet <br> for +10 years</td>
+  <td></td>
+  <td></td>
+  <td class="gray" rowspan="3"></td>
+  <td rowspan="2">Cycling</td>
+ </tr>
+ 
+  <tr>
+   <td class="pink">10:00 AM - 11:00 AM</td>
+   <td></td>
+   <td></td>
+   <td class="gray" colspan="2"></td>
+   <td></td>
+ 
+  </tr>
+  
+  
+  <tr>
+   <td class="pink">12:00 PM - 1:00 PM</td>
+   <td colspan="2">Gymnastics </td>
+   <td></td>
+   <td></td>
+   <td></td>
+   <td class="gray"></td>
+  </tr>
+  
+  
+  <tr>
+    <td class="pink">2:00 PM - 3:00 PM</td>
+    <td colspan="3">Cycling</td>
+    <td></td>
+    <td></td>
+    <td> Ballet <br> for +10 years</td>
+    <td></td>
+    
+  </tr>
+ </table>
+ 
+
+<footer class="main-footer">
+    <div class="footer-container">
+        
+        <div class="contact-icons">
+            <a href="mailto:activeland@gmail.com" class="contact-item">
+                <i class="fa-solid fa-envelope"></i> activeland@gmail.com
+            </a>
+            <br>
+            <a href="https://www.instagram.com/" target="_blank" class="contact-item">
+                <i class="fa-brands fa-instagram"></i> activeland@
+            </a>
+            <br>
+            <a href="tel:+996555555" class="contact-item">
+                <i class="fa-solid fa-phone"></i> +996555555
+            </a>
+        </div>
+    </div>
+</footer>
+  
+</body>
+</html>
